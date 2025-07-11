@@ -10,22 +10,22 @@ class EventsListPage extends StatefulWidget {
 class _EventsListPageState extends State<EventsListPage> {
   final List<Map<String, dynamic>> _dummyEvents = [
     {
-      'title': 'Team Meeting',
+      'title': 'Team Meet',
       'date': DateTime(2025, 7, 12),
       'time': '10:00 AM',
-      'description': 'Weekly team sync-up meeting'
+      'description': 'Weekly team sync-up meeting',
     },
     {
       'title': 'Doctor Appointment',
       'date': DateTime(2025, 7, 15),
       'time': '3:30 PM',
-      'description': 'Annual checkup'
+      'description': 'Annual checkup',
     },
     {
       'title': 'Birthday Party',
       'date': DateTime(2025, 7, 20),
       'time': '7:00 PM',
-      'description': 'Celebration at Dave\'s place'
+      'description': 'Celebration at Dave\'s place',
     },
   ];
 
@@ -33,7 +33,9 @@ class _EventsListPageState extends State<EventsListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF00695C), // Slightly lighter deep green for contrast
+        backgroundColor: Color(
+          0xFF00695C,
+        ), // Slightly lighter deep green for contrast
         foregroundColor: Colors.white, // White text
         title: const Text('Events List'),
       ),
@@ -61,7 +63,9 @@ class _EventsListPageState extends State<EventsListPage> {
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Date: ${event['date'].toString().substring(0, 10)}'),
+                        Text(
+                          'Date: ${event['date'].toString().substring(0, 10)}',
+                        ),
                         Text('Time: ${event['time']}'),
                       ],
                     ),
@@ -75,7 +79,9 @@ class _EventsListPageState extends State<EventsListPage> {
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Date: ${event['date'].toString().substring(0, 10)}'),
+                              Text(
+                                'Date: ${event['date'].toString().substring(0, 10)}',
+                              ),
                               Text('Time: ${event['time']}'),
                               const SizedBox(height: 8),
                               Text(event['description']),
