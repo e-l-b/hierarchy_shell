@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'events_list_page.dart';
+import 'clock_page.dart';
 
 class MainNavigationPage extends StatefulWidget {
   const MainNavigationPage({super.key});
@@ -15,6 +16,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
   final List<Widget> _pages = [
     const MyHomePage(title: 'Calendar'),
     const EventsListPage(),
+    const ClockPage(),
   ];
 
   @override
@@ -40,6 +42,11 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
             label: 'Events',
+            backgroundColor: Color(0xFF004D40), // Deep green background
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.access_time),
+            label: 'Clock',
             backgroundColor: Color(0xFF004D40), // Deep green background
           ),
         ],
